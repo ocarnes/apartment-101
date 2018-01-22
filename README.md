@@ -25,8 +25,9 @@ For this project, content-based filtering was selected because we are trying to 
 ![Item-item similarity](/img/item-item-similarity.png)
 
 In terms of apartments in Denver, for example, viewing [Welton Park](https://www.apartments.com/welton-park-denver-co/957rr74/) resulted in the following recommendations:
+
 | Recommendation| Apartment     | Price | Size |
-| ------------- |-------------| -----| -----|
+| ------------- | ------------- | ----- | ----- |
 | Original      |[Welton Park](https://www.apartments.com/welton-park-denver-co/957rr74/) | $945  |  576 sqft |
 |       1       |[The Ogden Arms Apartments](https://www.apartments.com/the-ogden-arms-apartments-denver-co/zxlmzyz/) | $1035| 625 sqft |
 |       2       |[The Vines](https://www.apartments.com/the-vines-denver-co/6bzm3kr/)|   $1295 | 800 sqft |
