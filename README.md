@@ -11,7 +11,9 @@ The goal of Apartment 101 is to help people shop for a first apartment based on 
 
 ## Data Collection ##
 The data collection step involved scraping listings based on the city of interest and maximum rent. Data was then cleaned by filling in missing data (usually square footage), in addition to filtering for fraudulent listings. Examples of fraudulent listings can be seen below where rent is listed way below average for the area, pictures are too high quality for a single listing, units are often listed as fully furnished, and instructions specify communicating via email rather than by phone or text.
+
 ![Fraudulent Listing](/img/Fraud.png)
+
 Descriptions and pictures are often pulled from real for sale ads so a quick google search of the description and / or the email provided can often prove fraudulence when in doubt. For the purpose of this project, however, listings with outlier price / sq ft values were dropped for simplicity.
 
 ## Feature Selection ##
