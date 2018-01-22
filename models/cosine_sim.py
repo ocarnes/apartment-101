@@ -1,10 +1,14 @@
 import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cosine
+from sklearn.preprocessing import StandardScaler
 from sklearn.metrics.pairwise import cosine_similarity
 
 def cos_sim_recs(selection, df, index_name, n=5):
     apartment = df.iloc[selection]
+    # ss = StandardScaler()
+    # X = ss.fit_transform(apartment.values.reshape(1,-1))
+    # cs = cosine_similarity(X, df)
     cs = cosine_similarity(apartment.values.reshape(1,-1), df)
     n = n+1
     rec_index = np.argsort(cs)[0][-n:][::-1][1:]

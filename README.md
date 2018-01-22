@@ -24,17 +24,17 @@ For this project, content-based filtering was selected because we are trying to 
 
 ![Item-item similarity](/img/item-item-similarity.png)
 
-In terms of apartments in Denver, for example, [The Winbro](https://www.apartments.com/winbro-denver-co/dnrpr8l/) was found to be most similar to the following apartments:
+In terms of apartments in Denver, for example, [Welton Park](https://www.apartments.com/welton-park-denver-co/957rr74/) was found to be most similar to the following apartments:
 
-[The Ogden Arms Apartments]('https://www.apartments.com/the-ogden-arms-apartments-denver-co/zxlmzyz/')
+[The Ogden Arms Apartments](https://www.apartments.com/the-ogden-arms-apartments-denver-co/zxlmzyz/)
 
- [The Vines](https://www.apartments.com/the-vines-denver-co/6bzm3kr/')
+ [The Vines](https://www.apartments.com/the-vines-denver-co/6bzm3kr/)
 
- [330 E 10th Ave](https://www.apartments.com/330-e-10th-ave-denver-co/hc6c8n1/')
+ [330 E 10th Ave](https://www.apartments.com/330-e-10th-ave-denver-co/hc6c8n1/)
 
- [1148 Washington St.](https://www.apartments.com/1148-washington-st-denver-co-unit-6/t8q6858/')
+ [1148 Washington St.](https://www.apartments.com/1148-washington-st-denver-co-unit-6/t8q6858/)
 
- [1320 E 14th Ave](https://www.apartments.com/1320-e-14th-ave-denver-co-unit-03/ds1tkgk/')
+ [1320 E 14th Ave](https://www.apartments.com/1320-e-14th-ave-denver-co-unit-03/ds1tkgk/)
 
 ## Future Steps ##
 1. Perform further nlp on apartment descriptions for better identification of fraudulent listing_scraper
