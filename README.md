@@ -3,16 +3,23 @@
 The goal of Apartment 101 is to help people shop for a first apartment based on income level and apartment features. The American Consumer Credit Counseling organization advocates that 35 percent of your gross income should go toward your housing and debt service [[1]](https://www.quicken.com/taking-inventory-your-personal-finances-how-much-your-paycheck-should-you-budget-bills-s). Apartment 101 calculates a recommended range for rent based on annual income and debt, which it then uses to search for available units. Apartment listings have been scraped from Apartments.com based on location and desired rent using a modified version of Adina Stoica's scraper found here [[2]](https://github.com/adinutzyc21/apartments-scraper). Once a user starts selecting potential apartments, further recommendations are provided based on similarities to the original selections.
 
 ### Contents ###
-1. Data cleaning
+1. Data collection
 2. Feature selection
 3. Recommendations
 4. Future steps
 
 
-## Data Cleaning ##
+## Data Collection ##
+The data collection step involved scraping listings based on the city of interest and maximum rent. Data was then cleaned by filling in missing data (usually square footage), in addition to filtering for fraudulent listings. Examples of fraudulent listings can be seen below where rent is listed way below average for the area, pictures are too high quality for a single listing, units are often listed as fully furnished, and instructions specify communicating via email rather than by phone or text.
+![Fraudulent Listing](/img/Fraud.png)
+Descriptions and pictures are often pulled from real for sale ads so a quick google search of the description and / or the email provided can often prove fraudulence when in doubt. For the purpose of this project, however, listings with outlier price / sq ft values were dropped for simplicity.
 
 ## Feature Selection ##
+Apartments.com provides a lot of features but they are unevenly filled out and placed in random locations throughout the listing. Apartment 101 currently selects city, description, rent, and square footage for features, in addition to calculating distance from a chosen point of interest (if you want to live near work or family, for instance).  
 
 ## Recommendations ##
 
 ## Future Steps ##
+1. Perform further nlp on apartment descriptions for better identification of fraudulent listing_scraper
+2. Add features like pets, parking, and in-unit washer/dryers using a combination of provided feature listings and further nlp (features sometimes listed in description rather than as features)
+3.
