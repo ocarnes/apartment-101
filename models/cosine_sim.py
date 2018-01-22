@@ -29,5 +29,5 @@ def selection_input(df, selection):
 if __name__ == '__main__':
     df = pd.read_pickle('../data/df_apartment_1_22_2018.pkl')
     selection = 'Welton Park - 576 sqft'
-    df, selection_idx, index_name = selection_input(df, selection)
-    print(cos_sim_recs(selection_idx, df, index_name, n=5))
+    df_alt, selection_idx, index_name = selection_input(df, selection)
+    recommendations = cos_sim_recs(selection_idx, df_alt, index_name, n=5)
