@@ -9,14 +9,21 @@ The goal of Apartment 101 is to help people shop for a first apartment based on 
 Apartment listings have been scraped from Apartments.com based on location and desired rent using a modified version of Adina Stoica's scraper found here [[2]](https://github.com/adinutzyc21/apartments-scraper). Once a user starts selecting potential apartments, further recommendations are provided based on similarities to the original selections.
 
 ### Contents ###
-1. Data collection
-2. Feature selection
-3. Recommendations
-4. Future steps
+1. [Data collection](#data-collection)
+2. [Data cleaning](#data-cleaning)
+3. [Feature selection](#feature-selection)
+4. [Recommendations](#recommendations)
+5. [Recommendation optimization](#recommendation-optimization)
+6. [Production](#production)
+7. [Future steps](#future-steps)
 
 
 ## Data Collection ##
-The data collection step involved scraping listings based on the city of interest and maximum rent. Data was then cleaned by filling in missing data (usually square footage), in addition to filtering for fraudulent listings. Examples of fraudulent listings can be seen below where rent is listed way below average for the area, pictures are too high quality for a single listing, units are often listed as fully furnished, and instructions specify communicating via email rather than by phone or text.
+The data collection step involved scraping listings based on the city of interest and maximum rent. The [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) python package was used to parse text scraped
+from Apartments.com. Once scraped, data is warehoused in
+
+## Data Cleaning ##
+Data was then cleaned by filling in missing data (usually square footage), in addition to filtering for fraudulent listings. Examples of fraudulent listings can be seen below where rent is listed way below average for the area, pictures are too high quality for a single listing, units are often listed as fully furnished, and instructions specify communicating via email rather than by phone or text.
 
 ![Fraudulent Listing](/img/Fraud.png)
 
@@ -40,15 +47,12 @@ In terms of apartments in Denver, for example, viewing [Welton Park](https://www
 |       3       |[330 E 10th Ave](https://www.apartments.com/330-e-10th-ave-denver-co/hc6c8n1/)|    $995 | 605 sqft |
 |       4       |[1148 Washington St.](https://www.apartments.com/1148-washington-st-denver-co-unit-6/t8q6858/)|    $975 | 600 sqft |
 |       5       |[1320 E 14th Ave](https://www.apartments.com/1320-e-14th-ave-denver-co-unit-03/ds1tkgk/)|    $1000 | 600 sqft
-<!-- [The Ogden Arms Apartments](https://www.apartments.com/the-ogden-arms-apartments-denver-co/zxlmzyz/)
 
- [The Vines](https://www.apartments.com/the-vines-denver-co/6bzm3kr/)
+## Recommendation Optimization ##
 
- [330 E 10th Ave](https://www.apartments.com/330-e-10th-ave-denver-co/hc6c8n1/)
 
- [1148 Washington St.](https://www.apartments.com/1148-washington-st-denver-co-unit-6/t8q6858/)
-
- [1320 E 14th Ave](https://www.apartments.com/1320-e-14th-ave-denver-co-unit-03/ds1tkgk/) -->
+## Production ##
+As a final touch, I've created a Flask app for a more interactive experience of Apartment 101, which can be found [here](website). Users can input salary and debt data for rent customization, or they can simply proceed to listings based on predefined city and price range limits.
 
 ## Future Steps ##
 1. Perform further nlp on apartment descriptions for better identification of fraudulent listing_scraper
