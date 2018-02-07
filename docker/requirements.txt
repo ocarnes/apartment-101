@@ -1,0 +1,6 @@
+Flask
+Redis
+bs4
+pandas
+numpy
+pymongo

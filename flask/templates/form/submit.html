@@ -1,64 +1,286 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fraud Detector">
-  <meta name="author" content="Team">
+  <head>
 
-  <title>Fraud Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Bootstrap Core CSS -->
-  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <title>Shop Homepage - Start Bootstrap Template</title> -->
 
-  <!-- Custom Fonts -->
-  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
-  <!-- Plugin CSS -->
-  <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <!-- <link href="../../static/css/shop-homepage.css" rel="stylesheet">
 
-  <!-- Theme CSS -->
-  <link href="static/css/creative.min.css" rel="stylesheet">
+    <title>Apartment 101</title> -->
 
-</head>
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<body>
-  <h1>Submit Your Text</h1>
-  <p>Paste your articles text into the input box below, and click the <span>Classify</span> button to predict your article's classification.</p>
-  <section class="bg-dark" id="about">
+    <!-- Custom fonts for this template -->
+    <link href="../../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="../../static/css/landing-page.min.css" rel="stylesheet"> -->
+    <link href="../../static/css/shop-homepage.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
       <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <!-- <h2 class="section-heading">How it all started</h2> -->
-                  <hr class="light">
-                  <form action="/predict" method='POST' >
-                      <textarea style='color:black',
-                                name="article_body",
-                                rows="12", cols="60"></textarea>
-                      <button style='color:black' type="submit">Predict Popularity</button>
-                  </form>
-              </div>
-          </div>
+        <!-- <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="btn btn-primary" href="#">Sign In</a>
       </div>
-  </section>
-  <!-- jQuery -->
-  <script src="static/vendor/jquery/jquery.min.js"></script>
+    </nav> -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container"> -->
+        <a class="navbar-brand" href="#">Apartment 101</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="budget">Budget 101</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/ocarnes/apartment-101/">Repo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <!-- Bootstrap Core JavaScript -->
-  <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
-  <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Page Content -->
+    <div class="container">
+    <!-- <hr style='opacity:0'>
+    <hr style='opacity:0'>
+    <hr style='opacity:0'> -->
+      <div id="wrapper">
+        <div id="sidebar-wrapper">
+      <!-- <div class="row justify-content-start col-lg-6 my-4 mb-5 fixed-top">
+        <div class="container"> -->
+        <!-- <hr style='opacity:0'> -->
+          <!-- <div class="row"> -->
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.216225729443!2d-89.2391164!3d48.45238070000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d5921616d61c26b%3A0x15e5407d2071c8dd!2s109+Hogarth+St%2C+Thunder+Bay%2C+ON+P7A+7G8!5e0!3m2!1sen!2sca!4v1424371524427" width="100%" height="450" frameborder="0" style="border:0"></iframe> -->
 
-  <!-- Theme JavaScript -->
-  <script src="static/js/creative.min.js"></script>
+            <div id="map"></div>
 
-</body>
+            <script>
+              var map;
+              function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 16,
+                  center: new google.maps.LatLng(-33.91722, 151.23064),
+                  mapTypeId: 'roadmap'
+                });
+
+                var features = [
+                  {
+                    position: new google.maps.LatLng({{ listings.find()[0]['lat'][0] }}, {{ listings.find()[0]['long'][0] }}),
+                    contentString: {{ listings.find()[0]['url'] }},
+                    name: {{ listings.find()[0]['title'] }}
+                  }, {
+                    position: new google.maps.LatLng(-33.91539, 151.22820),
+                    contentString: 'info'
+                  }, {
+                    position: new google.maps.LatLng(-33.91747, 151.22912),
+                    contentString: 'info'
+                  }, {
+                    position: new google.maps.LatLng(-33.91910, 151.22907),
+                    contentString: 'info'
+                  }, {
+                    position: new google.maps.LatLng(-33.91725, 151.23011),
+                    contentString: 'info'
+                  }
+                ];
+                var infoWindow = new google.maps.InfoWindow();
+                for (var i = 0; i < features.length; i++) {
+                    var data = features[i];
+                    // var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                    var marker = new google.maps.Marker({
+                        position: data.position,
+                        map: map,
+                        // title: feature.contentString
+                    });
+
+                    //Attach click event to the marker.
+                    (function (marker, data) {
+                        google.maps.event.addListener(marker, "mouseover", function (e) {
+                            //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                            infoWindow.setContent("<div style = 'width:50px;min-height:5px'><a class='nav-link' href=" + data.contentString + "</a></div>" + data.name);
+                            infoWindow.open(map, marker);
+                        });
+                    })(marker, data);
+                  }
+                }
+
+                //
+                // var legend = document.getElementById('legend');
+                // for (var key in icons) {
+                //   var type = icons[key];
+                //   var name = type.name;
+                //   var icon = type.icon;
+                //   var div = document.createElement('div');
+                //   div.innerHTML = '<img src="' + icon + '"> ' + name;
+                //   legend.appendChild(div);
+                // }
+
+                // map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+              // }
+            </script>
+            <script async defer
+            src="{{ url }}">
+            </script>
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="row justify-content-end static-top">
+        <div class="col-lg-6">
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item One</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <!-- <p>{{ listings }}</p> -->
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Two</a>
+                  </h4>
+                  <h5>{{ '$'+listings.find()[0]['price'] }}</h5>
+                  <p> {{ listings.find()[0]['title'] }} </p>
+                  <p class="card-text">{{ listings.find()[0]['housing'] }}</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Three</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Four</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Five</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Six</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>
