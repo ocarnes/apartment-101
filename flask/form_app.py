@@ -87,7 +87,8 @@ def submit():
     listings = CraigslistScraper(str(input_dict['city']), params)
     listings.scrape()
     listings._listing_build()
-    return render_template('form/submit.html', url=url, listings=listings.db)
+    listings = [listing for listing in listings.db.find({'lat': {'$exists':True}})]
+    return render_template('form/submit.html', url=url, listings=listings)
 
 # @app.route('/budget', methods=['GET','POST'])
 # def budget():

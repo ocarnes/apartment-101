@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     # replace username/repo:tag with your name and image details
-    image: ocarnes/get-started:part2
+    image: ocarnes/apt-test:part1
     deploy:
       replicas: 5
       restart_policy:

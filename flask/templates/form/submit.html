@@ -89,39 +89,29 @@
               var map;
               function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 16,
-                  center: new google.maps.LatLng(-33.91722, 151.23064),
+                  zoom: 10,
+                  center: new google.maps.LatLng(39.929377, -105.09414),
                   mapTypeId: 'roadmap'
                 });
 
-                var features = [
-                  {
-                    position: new google.maps.LatLng({{ listings.find()[0]['lat'][0] }}, {{ listings.find()[0]['long'][0] }}),
-                    contentString: {{ listings.find()[0]['url'] }},
-                    name: {{ listings.find()[0]['title'] }}
-                  }, {
-                    position: new google.maps.LatLng(-33.91539, 151.22820),
-                    contentString: 'info'
-                  }, {
-                    position: new google.maps.LatLng(-33.91747, 151.22912),
-                    contentString: 'info'
-                  }, {
-                    position: new google.maps.LatLng(-33.91910, 151.22907),
-                    contentString: 'info'
-                  }, {
-                    position: new google.maps.LatLng(-33.91725, 151.23011),
-                    contentString: 'info'
-                  }
-                ];
+                var listings = {{ listings|tojson }};
                 var infoWindow = new google.maps.InfoWindow();
-                for (var i = 0; i < features.length; i++) {
-                    var data = features[i];
+                for (var i = 0; i < listings.length; i++) {
+                    var listing = listings[i];
+                    var data = {
+                      position: new google.maps.LatLng(listing.lat[0], listing.long[0]),
+                      contentString: listing.url,
+                      name: '$'+listing.price+' | '+listing.sqft+'sqft'
+                    };
                     // var myLatlng = new google.maps.LatLng(data.lat, data.lng);
                     var marker = new google.maps.Marker({
                         position: data.position,
                         map: map,
                         // title: feature.contentString
                     });
+                    // Add a marker clusterer to manage the markers.
+                    var markerCluster = new MarkerClusterer(map, marker,
+                        {imagePath: '../../static/img/m1'});
 
                     //Attach click event to the marker.
                     (function (marker, data) {
@@ -183,9 +173,9 @@
                   <h4 class="card-title">
                     <a href="#">Item Two</a>
                   </h4>
-                  <h5>{{ '$'+listings.find()[0]['price'] }}</h5>
-                  <p> {{ listings.find()[0]['title'] }} </p>
-                  <p class="card-text">{{ listings.find()[0]['housing'] }}</p>
+                  <h5>{{ '${}'.format(listings[0]['price']) }}</h5>
+                  <p> {{ listings[0]['title'] }} </p>
+                  <p class="card-text">{{ listings[0]['housing'] }}</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -280,7 +270,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="../../static/vendor/jquery/jquery.min.js"></script>
     <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="../../static/vendor/bootstrap/js/markercluster.js"></script>
   </body>
 
 </html>
