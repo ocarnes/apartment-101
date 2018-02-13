@@ -60,6 +60,5 @@ As a final touch, I've created a Flask app for a more interactive experience of 
 3. Complete flask app for real-time salary and debt computations
 
 ## References ##
-[Budget Info](https://www.quicken.com/taking-inventory-your-personal-finances-how-much-your-paycheck-should-you-budget-bills-s).
-
-[Sample Apartments.com scraper](https://github.com/adinutzyc21/apartments-scraper).
+1. [Budget Info](https://www.quicken.com/taking-inventory-your-personal-finances-how-much-your-paycheck-should-you-budget-bills-s)
+2. [Sample Apartments.com scraper](https://github.com/adinutzyc21/apartments-scraper)
